@@ -20,4 +20,4 @@ jobs:
           uses: plexsystems/container-structure-test-action@v0.2.0
           with:
             image: asizikov/asp-net-container:latest
-            config: /container-structure-tests.yaml
+            config: container-structure-tests.yaml
