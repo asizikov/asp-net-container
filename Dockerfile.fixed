@@ -7,7 +7,6 @@ ARG CREATED=unknown
 WORKDIR /app
 
 COPY . ./
-RUN ls -a
 RUN dotnet restore
 RUN dotnet test
 RUN dotnet publish -c Release -o output
