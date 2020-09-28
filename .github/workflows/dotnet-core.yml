@@ -15,9 +15,9 @@ jobs:
           uses: docker/build-push-action@v1.1.1
           with:
             push: false
-            tags: asp-net-container:latest
+            tags: latest
         - name: Container Structure Test Action
           uses: plexsystems/container-structure-test-action@v0.2.0
           with:
-            image: asp-net-container:latest
+            image: asizikov/asp-net-container:latest
             config: /container-structure-tests.yaml
