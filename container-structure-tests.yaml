@@ -1,0 +1,10 @@
+schemaVersion: '2.0.0'
+metadataTest:
+    env:
+    - key: 'ASPNETCORE_URLS'
+      value: 'http://+:80'
+    - key: 'DOTNET_RUNNING_IN_CONTAINER'
+      value: 'true'
+    
+    workdir: "/app/output"
+    exposedPorts: ["80"]

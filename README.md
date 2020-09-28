@@ -17,3 +17,14 @@ docker run -p 801:80 --name asp-net-container asp-net-container:latest
 this will build an image, start a new container with would serve http requests on localhost, port 801.
 
 http://localhost:801/health
+
+
+## How to run container structure tests
+
+### Local run.
+
+Make sure you cave container-structure-tests installed. You can follow the instructions from [the official repo](https://github.com/GoogleContainerTools/container-structure-test).
+
+```bash
+container-structure-test test --image asp-net-container:latest --config container-structure-tests.yaml
+```
