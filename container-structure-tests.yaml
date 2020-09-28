@@ -6,5 +6,21 @@ metadataTest:
     - key: 'DOTNET_RUNNING_IN_CONTAINER'
       value: 'true'
     
-    workdir: "/app/output"
+    workdir: "/app"
     exposedPorts: ["80"]
+
+fileExistenceTests:
+- name: "no git files present"
+  path: '/app/.git'
+  shouldExist: false
+
+commandTests:
+    - name: ".NET Core runtime installed"
+      command: "which"
+      args: [dotnet]
+      expectedOutput: ["/usr/bin/dotnet"]
+
+    - name: "no SDK installed"
+      command: "dotnet"
+      args: ["--list-sdks"]
+      excludedOutput: [".*sdk]$"]
