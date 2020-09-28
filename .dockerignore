@@ -1,0 +1,15 @@
+*
+!/src/**
+!/tests/**
+!*.sln
+
+**/*.user
+**/obj/*
+**/*.dll
+
+
+
+**/*~
+**/*.log
+**/.DS_Store
+**/Thumbs.db
