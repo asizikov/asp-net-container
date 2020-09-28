@@ -15,3 +15,7 @@ jobs:
           uses: docker/build-push-action@v1.1.1
           with:
             push: false
+        - name: Container Structure Test Action
+          uses: plexsystems/container-structure-test-action@v0.2.0
+          with:
+            config: /container-structure-tests.yaml
