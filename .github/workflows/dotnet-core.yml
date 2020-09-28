@@ -16,6 +16,7 @@ jobs:
           with:
             push: false
             tags: latest
+            dockerfile: Dockerfile.fixed
         - name: Container Structure Test Action
           uses: plexsystems/container-structure-test-action@v0.2.0
           with:
