@@ -24,3 +24,8 @@ commandTests:
       command: "dotnet"
       args: ["--list-sdks"]
       excludedOutput: [".*/sdk]*"]
+    
+    - name: "no test dlls present"
+      command: "find"
+      args: ["/app", "-name", "*.Tests.dll"]
+      excludedOutput: [".*.Tests.dll*"]
