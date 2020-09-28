@@ -6,6 +6,7 @@ This Dockerfile is horrible, you may want to fork this repository, fix all the p
 
 I recommend you to use https://github.com/marketplace/actions/container-structure-test-action to ensure the docker image quality.
 
+There is also one more file: `Dockerfile.fixed` with some fixes applied to it. If you build an image using this docker file this image will pass CI tests.
 
 ## How to run this application
 
