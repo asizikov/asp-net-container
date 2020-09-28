@@ -1,14 +1,19 @@
 schemaVersion: '2.0.0'
 metadataTest:
     env:
-    - key: 'ASPNETCORE_URLS'
-      value: 'http://+:80'
-    - key: 'DOTNET_RUNNING_IN_CONTAINER'
-      value: 'true'
-    
+      - key: 'ASPNETCORE_URLS'
+        value: 'http://+:80'
+      - key: 'DOTNET_RUNNING_IN_CONTAINER'
+        value: 'true'
+    labels:
+      - key: 'org.opencontainers.image.authors'
+        value: 'https://github.com/asizikov'
+      - key: 'org.opencontainers.image.source'
+        value: 'https://github.com/asizikov/asp-net-container'
+      - key: 'org.opencontainers.image.source'
+        value: 'https://github.com/asizikov/asp-net-container'
     workdir: "/app"
     exposedPorts: ["80"]
-
 fileExistenceTests:
 - name: "no git files present"
   path: '/app/.git'
