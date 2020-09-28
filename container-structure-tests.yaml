@@ -23,4 +23,4 @@ commandTests:
     - name: "no SDK installed"
       command: "dotnet"
       args: ["--list-sdks"]
-      excludedOutput: [".*sdk]$"]
+      excludedOutput: [".*/sdk]*"]
